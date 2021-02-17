@@ -1,0 +1,46 @@
+{
+  "name": "nodejs-grpc-labs",
+  "version": "1.0.0",
+  "description": "Random gRPC + Node.js samples and experiments for learning/reference purposes",
+  "scripts": {
+    "lint": "eslint --max-warnings=0 '{src,__tests__}/**/*.js'",
+    "lint:fix": "eslint --fix '{src,__tests__}/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjsicam/nodejs-grpc-labs"
+  },
+  "keywords": [
+    "graphql",
+    "microservices",
+    "grpc"
+  ],
+  "author": "Benj Sicam <benjsicam@gmail.com> (https://github.com/benjsicam)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjsicam/nodejs-grpc-labs/issues"
+  },
+  "homepage": "https://github.com/benjsicam/nodejs-grpc-labs#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.12.13",
+    "@grpc/proto-loader": "^0.5.6",
+    "core-js": "^3.8.3",
+    "grpc": "^1.24.5",
+    "mali": "^0.40.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.16",
+    "@babel/core": "^7.12.16",
+    "@babel/node": "^7.12.16",
+    "@babel/parser": "^7.12.16",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
+  }
+}
