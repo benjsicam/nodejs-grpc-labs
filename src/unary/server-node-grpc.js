@@ -26,7 +26,7 @@ const server = new grpc.Server()
 server.addService(serviceProto.math.SubtractionService.service, { subtract })
 
 // Start the gRPC Server
-server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), function (err) {
+server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), (err) => {
   if (err) return console.error(err)
   
   console.info(`gRPC Server is now listening on port 50051`)

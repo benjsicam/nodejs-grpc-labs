@@ -14,7 +14,7 @@ const serviceProto = grpc.loadPackageDefinition(packageDefinition)
 const client = new serviceProto.math.SubtractionService('localhost:50051', grpc.credentials.createInsecure())
 
 // Invoke the Service operation/function
-client.subtract({ minuend: 2890.5, subtrahend: 882.3 }, function (err, response) {
+client.subtract({ minuend: 2890.5, subtrahend: 882.3 }, (err, response) => {
   if (err) return console.error(err)
 
   console.log('The difference is:', response.difference)
