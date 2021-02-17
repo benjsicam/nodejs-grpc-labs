@@ -1,5 +1,4 @@
 ---
-parser: babel-eslint
 parserOptions:
   ecmaVersion: 2020
   sourceType: module
@@ -13,7 +12,6 @@ extends:
   - plugin:import/warnings
 env:
   node: true
-  jest: true
 rules:
   no-underscore-dangle: 0
   no-template-curly-in-string: 0
