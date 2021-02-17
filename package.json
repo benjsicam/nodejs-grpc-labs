@@ -25,7 +25,8 @@
   "dependencies": {
     "@grpc/grpc-js": "^1.2.7",
     "@grpc/proto-loader": "^0.5.6",
-    "mali": "^0.40.0"
+    "faker": "^5.4.0",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "eslint": "^7.20.0",
