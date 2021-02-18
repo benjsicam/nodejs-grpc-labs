@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package file;
+
+enum Status {
+  SUCCESS = 1;
+  FAILED = 2;
+}
+
+message File {
+  bytes chunk = 1;
+}
+
+message FileMetadata {
+  string fileName = 1;
+}
+
+message FileUploadRequest {
+  oneof request {
+    FileMetadata metadata = 1;
+    File file = 2;
+  }
+}
+
+message FileUploadResponse {
+  Status status = 1;
+}
+
+service FileUploadService {
+  rpc upload (stream FileUploadRequest) returns (FileUploadResponse) {}
+}
