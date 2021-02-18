@@ -1,0 +1,27 @@
+syntax = "proto3";
+ 
+package chat;
+
+enum Status {
+  SUCCESS = 1;
+  FAILED = 2;
+}
+
+message User {
+  string user = 1;
+}
+ 
+message Message {
+  string user = 1;
+  string message = 2;
+}
+
+message Response {
+  Status status = 1;
+}
+
+service ChatService {
+  rpc join (stream User) returns (stream Message) {}
+  rpc chat (Message) returns (Response) {}
+  rpc leave (User) returns (Response) {}
+}
