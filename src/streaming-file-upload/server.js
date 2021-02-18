@@ -20,7 +20,7 @@ const upload = (call, callback) => {
 
   call.on('data', (fileStream) => {
     if (!fileStream.file) {
-      // Create the file 
+      // Create the file
       file = fs.createWriteStream(`./files/${fileStream.metadata.fileName}`)
     } else {
       file.write(fileStream.file.chunk)
@@ -45,9 +45,8 @@ server.addService(serviceProto.file.FileUploadService.service, { upload })
 // Start the gRPC Server
 server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), (err) => {
   if (err) return console.error(err)
-  
+
   console.info(`gRPC Server is now listening on port 50051`)
 
   server.start()
 })
-

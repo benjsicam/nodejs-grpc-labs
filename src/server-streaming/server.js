@@ -35,9 +35,8 @@ server.addService(serviceProto.streaming.LoremIpsumService.service, { generate }
 // Start the gRPC Server
 server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), (err) => {
   if (err) return console.error(err)
-  
+
   console.info(`gRPC Server is now listening on port 50051`)
 
   server.start()
 })
-
