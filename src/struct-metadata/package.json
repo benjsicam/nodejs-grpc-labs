@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-grpc-labs/struct-metadata",
+  "version": "1.0.0",
+  "description": "Random gRPC + Node.js samples and experiments for learning/reference purposes",
+  "scripts": {
+    "lint": "eslint --max-warnings=0 '{src,__tests__}/**/*.js'",
+    "lint:fix": "eslint --fix '{src,__tests__}/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjsicam/nodejs-grpc-labs"
+  },
+  "keywords": [
+    "graphql",
+    "microservices",
+    "grpc"
+  ],
+  "author": "Benj Sicam <benjsicam@gmail.com> (https://github.com/benjsicam)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjsicam/nodejs-grpc-labs/issues"
+  },
+  "homepage": "https://github.com/benjsicam/nodejs-grpc-labs#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.8",
+    "@grpc/proto-loader": "^0.5.6",
+    "faker": "^5.4.0",
+    "google-protobuf": "^3.15.0-rc.2",
+    "lodash": "^4.17.20"
+  }
+}
