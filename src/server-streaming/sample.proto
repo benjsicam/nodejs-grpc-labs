@@ -2,14 +2,14 @@ syntax = "proto3";
 
 package streaming;
 
-message RequestArgs {
+message LoremIpsumRequest {
   int32 numOfParagraphs = 1;
 }
 
-message Result {
+message LoremIpsumResponse {
   string paragraph = 1;
 }
 
 service LoremIpsumService {
-  rpc generate (RequestArgs) returns (stream Result) {}
+  rpc generate (LoremIpsumRequest) returns (stream LoremIpsumResponse) {}
 }

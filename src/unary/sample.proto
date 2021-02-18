@@ -2,15 +2,15 @@ syntax = "proto3";
 
 package math;
 
-message SubtractionArgs {
+message SubtractionRequest {
   float minuend = 1;
   float subtrahend = 2;
 }
 
-message SubtractionResult {
+message SubtractionResponse {
   float difference = 1;
 }
 
 service SubtractionService {
-  rpc subtract (SubtractionArgs) returns (SubtractionResult) {}
+  rpc subtract (SubtractionRequest) returns (SubtractionResponse) {}
 }
