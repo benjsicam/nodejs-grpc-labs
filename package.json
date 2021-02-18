@@ -26,6 +26,7 @@
     "@grpc/grpc-js": "^1.2.8",
     "@grpc/proto-loader": "^0.5.6",
     "faker": "^5.4.0",
+    "google-protobuf": "^3.15.0-rc.2",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
