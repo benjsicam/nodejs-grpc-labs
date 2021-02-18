@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package location;
+
+message Location {
+  float lat = 1;
+  float lng = 2;
+}
+
+message LocationTrackingResponse {
+  string status = 1;
+}
+
+service LocationTrackingService {
+  rpc track (stream Location) returns (LocationTrackingResponse) {}
+}
