@@ -2,7 +2,7 @@ require('google-protobuf/google/protobuf/struct_pb.js')
 require('./codegen/sample_pb.js')
 
 const grpc = require('@grpc/grpc-js')
-const faker = require('faker')
+const { faker } = require('@faker-js/faker')
 
 const services = require('./codegen/sample_grpc_pb')
 
@@ -11,16 +11,18 @@ const client = new services.EntityServiceClient('localhost:50051', grpc.credenti
 
 const entity = new proto.entity.Entity()
 entity.setName(faker.name.firstName())
-entity.setMetadata(proto.google.protobuf.Struct.fromJavaScript({
-  email: faker.internet.email(),
-  isMember: faker.random.boolean(),
-  license: faker.random.number(),
-  location: {
+entity.setMetadata(
+  proto.google.protobuf.Struct.fromJavaScript({
+    email: faker.internet.email(),
+    isMember: faker.datatype.boolean(),
+    license: faker.datatype.number(),
+    location: {
       lat: faker.address.latitude(),
       lng: faker.address.longitude()
-  },
-  restrictions: [1, '12', true]
-}))
+    },
+    restrictions: [1, '12', true]
+  })
+)
 
 // Invoke the Service operation/function
 client.create(entity, (err, response) => {

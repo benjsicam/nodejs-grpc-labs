@@ -2,14 +2,14 @@ require('google-protobuf/google/protobuf/struct_pb.js')
 require('./codegen/sample_pb.js')
 
 const grpc = require('@grpc/grpc-js')
-const faker = require('faker')
+const { faker } = require('@faker-js/faker')
 
 const services = require('./codegen/sample_grpc_pb')
 
 // Service Implementation
 const create = ({ request }, callback) => {
   const entity = {
-    id: faker.random.number(),
+    id: faker.datatype.number(),
     name: request.getName(),
     metadata: request.getMetadata().toJavaScript()
   }
@@ -17,7 +17,7 @@ const create = ({ request }, callback) => {
   console.info('Entity Created', entity)
 
   const response = new proto.entity.Entity()
-  
+
   response.setId(entity.id)
   response.setName(entity.name)
   response.setMetadata(proto.google.protobuf.Struct.fromJavaScript(entity.metadata))

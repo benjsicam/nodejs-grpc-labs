@@ -12,9 +12,13 @@
     "url": "git+https://github.com/benjsicam/nodejs-grpc-labs"
   },
   "keywords": [
-    "graphql",
-    "microservices",
-    "grpc"
+    "grpc",
+    "grpc-client",
+    "grpc-server",
+    "grpc-streaming",
+    "grpc-client-streaming",
+    "grpc-server-streaming",
+    "grpc-duplex-streaming"
   ],
   "author": "Benj Sicam <benjsicam@gmail.com> (https://github.com/benjsicam)",
   "license": "MIT",
@@ -23,17 +27,17 @@
   },
   "homepage": "https://github.com/benjsicam/nodejs-grpc-labs#readme",
   "dependencies": {
-    "@grpc/grpc-js": "^1.2.8",
-    "@grpc/proto-loader": "^0.5.6",
-    "faker": "^5.4.0",
-    "google-protobuf": "^3.15.0-rc.2",
-    "lodash": "^4.17.20"
+    "@faker-js/faker": "^7.6.0",
+    "@grpc/grpc-js": "^1.8.12",
+    "@grpc/proto-loader": "^0.7.5",
+    "google-protobuf": "^3.21.2",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "eslint": "^7.20.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4"
   }
 }
