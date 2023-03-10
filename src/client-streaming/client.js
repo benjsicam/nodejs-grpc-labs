@@ -2,7 +2,7 @@ import * as grpc from '@grpc/grpc-js'
 import * as protoLoader from '@grpc/proto-loader'
 
 import _ from 'lodash'
-import faker from 'faker'
+import { faker } from '@faker-js/faker'
 
 // Resolve the Protobuf Definition
 const SERVICE_PROTO = './sample.proto'
@@ -23,7 +23,7 @@ const call = client.track((err, response) => {
   console.log('Response:', response.status)
 })
 
-_.times(faker.random.number({ min: 5, max: 20 }), () => {
+_.times(faker.datatype.number({ min: 5, max: 20 }), () => {
   call.write({
     lat: faker.address.latitude(),
     lng: faker.address.longitude()
